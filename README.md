@@ -1,11 +1,11 @@
-# python-sqlite-orm
+# tiny-orm
 
-A Python object relational mapper for SQLite.
+A tiny [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) for SQLite.
 
 ## Install
 
 ```sh
-pip install sqlite-orm
+pip install tiny-orm
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ Following a basic tutorial to demonstrate how to use the ORM.
 
     ```py
     # post.py
-    from orm import Model
+    from tiny_orm import Model
 
     class Post(Model):
 
@@ -30,7 +30,7 @@ Following a basic tutorial to demonstrate how to use the ORM.
 2. Import `Database` to create a data access object.
 
     ```py
-    >>> from orm import Database
+    >>> from tiny_orm import Database
     >>> db = Database('db.sqlite')  # indicating a database file.
     ```
 
@@ -114,9 +114,6 @@ See [CONTRIBUTING](/CONTRIBUTING.md).
 
 ## License
 
-[![CC0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
 The MIT License.
 
--
-
+---
