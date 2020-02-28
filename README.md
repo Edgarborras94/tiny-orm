@@ -1,6 +1,6 @@
 # tiny-orm
 
-A tiny [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) for SQLite.
+A tiny [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) for Python and SQLite.
 
 ## Install
 
