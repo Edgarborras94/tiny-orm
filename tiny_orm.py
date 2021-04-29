@@ -115,11 +115,7 @@ class Manager(object):  # pylint: disable=R0205
         """ Get a model object from database by its column """
         sql = 'SELECT * FROM %s WHERE ? = ?' % self.table_name
         result = self.db.execute(sql, column, id)
-        row = result.fetchone()
-        if not row:
-            msg = 'Object%s with id does not exist: %s' % (self.model, id)
-            raise ValueError(msg)
-        return self.create(**row)
+        return (self.create(**row) for row in result.fetchall())
 
     def has(self, id):
         """ Check if a model object exists in database by its id """
