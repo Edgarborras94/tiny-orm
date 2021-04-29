@@ -114,7 +114,7 @@ class Manager(object):  # pylint: disable=R0205
     def where(self, column, id):
         """ Get a model object from database by its column """
         sql = 'SELECT * FROM %s WHERE ? = ?' % self.table_name
-        result = self.db.execute(sql, column, id)
+        result = self.db.execute(sql, (column, id))
         return (self.create(**row) for row in result.fetchall())
 
     def has(self, id):
