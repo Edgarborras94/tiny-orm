@@ -111,7 +111,7 @@ class Manager(object):  # pylint: disable=R0205
             raise ValueError(msg)
         return self.create(**row)
     
-     def where(self, column, id):
+    def where(self, column, id):
         """ Get a model object from database by its column """
         sql = 'SELECT * FROM %s WHERE ? = ?' % self.table_name
         result = self.db.execute(sql, column, id)
